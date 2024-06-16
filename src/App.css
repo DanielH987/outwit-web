@@ -1,5 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+
+:root {
+  --game-font: "Seymour One", sans-serif;
+  --speech-font: "Sofia Sans", sans-serif;
+  --dark-purple: rgb(18, 22, 75);
+  --dark-blue: rgb(42, 118, 180);
+  --light-blue: rgba(121, 185, 255, 255);
+  --white: rgb(255, 255, 255);
+  --light-grey: rgb(221, 221, 221);
+}
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #282c34;
+  color: white;
+}
+
+h1 {
+  font-family: var(--game-font);
+  margin-bottom: 20px;
 }
 
 .App-logo {
@@ -35,4 +59,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  background-color: darkgray;
+  border: 4px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #000;
+  flex-wrap: wrap;
 }
