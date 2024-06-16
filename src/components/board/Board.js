@@ -1,119 +1,29 @@
 import React from 'react';
 import Cell from '../cell/Cell';
 
+const boardLayout = [
+    ['', '', '', '', '', '', '#D3D3D3', '#D3D3D3', '#D3D3D3'],
+    ['', '', '', '', '', '', '#D3D3D3', '#D3D3D3', '#D3D3D3'],
+    ['', '', '', '', '', '', '#D3D3D3', '#D3D3D3', '#D3D3D3'],
+    ['', '', '', '', '', '', ''       ,        '',        ''],
+    ['', '', '', '', '', '', ''       ,        '',        ''],
+    ['', '', '', '', '', '', ''       ,        '',        ''],
+    ['', '', '', '', '', '', ''       ,        '',        ''],
+    ['#404040', '#404040', '#404040', '', '', '', '', '', ''],
+    ['#404040', '#404040', '#404040', '', '', '', '', '', ''],
+    ['#404040', '#404040', '#404040', '', '', '', '', '', '']
+];
+
 const Board = () => {
     return (
         <>
-        <div className="board">
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell color={'#D3D3D3'}/>
-            <Cell color={'#D3D3D3'}/>
-            <Cell color={'#D3D3D3'}/>
-        </div>
-        <div className="board">
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell color={'#D3D3D3'}/>
-            <Cell color={'#D3D3D3'}/>
-            <Cell color={'#D3D3D3'}/>
-        </div>
-        <div className="board">
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell color={'#D3D3D3'}/>
-            <Cell color={'#D3D3D3'}/>
-            <Cell color={'#D3D3D3'}/>
-        </div>
-        <div className="board">
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-        </div>
-        <div className="board">
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-        </div>
-        <div className="board">
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-        </div>
-        <div className="board">
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-        </div>
-        <div className="board">
-            <Cell color={'#404040'}/>
-            <Cell color={'#404040'}/>
-            <Cell color={'#404040'}/>
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-        </div>
-        <div className="board">
-            <Cell color={'#404040'}/>
-            <Cell color={'#404040'}/>
-            <Cell color={'#404040'}/>
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-        </div>
-        <div className="board">
-            <Cell color={'#404040'}/>
-            <Cell color={'#404040'}/>
-            <Cell color={'#404040'}/>
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-        </div>
+            {boardLayout.map((row, rowIndex) => (
+                <div key={rowIndex} className="board">
+                    {row.map((color, cellIndex) => (
+                        <Cell key={cellIndex} color={color} />
+                    ))}
+                </div>
+            ))}
         </>
     );
 };
