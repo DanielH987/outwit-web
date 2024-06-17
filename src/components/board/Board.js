@@ -11,9 +11,9 @@ const Board = () => {
             <Cell />
             <Cell />
             <Cell />
-            <Cell color={'lightgray'}/>
-            <Cell color={'lightgray'}/>
-            <Cell color={'lightgray'}/>
+            <Cell color={'#D3D3D3'}/>
+            <Cell color={'#D3D3D3'}/>
+            <Cell color={'#D3D3D3'}/>
         </div>
         <div className="board">
             <Cell />
@@ -22,9 +22,9 @@ const Board = () => {
             <Cell />
             <Cell />
             <Cell />
-            <Cell color={'lightgray'}/>
-            <Cell color={'lightgray'}/>
-            <Cell color={'lightgray'}/>
+            <Cell color={'#D3D3D3'}/>
+            <Cell color={'#D3D3D3'}/>
+            <Cell color={'#D3D3D3'}/>
         </div>
         <div className="board">
             <Cell />
@@ -33,20 +33,9 @@ const Board = () => {
             <Cell />
             <Cell />
             <Cell />
-            <Cell color={'lightgray'}/>
-            <Cell color={'lightgray'}/>
-            <Cell color={'lightgray'}/>
-        </div>
-        <div className="board">
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
+            <Cell color={'#D3D3D3'}/>
+            <Cell color={'#D3D3D3'}/>
+            <Cell color={'#D3D3D3'}/>
         </div>
         <div className="board">
             <Cell />
@@ -82,20 +71,9 @@ const Board = () => {
             <Cell />
         </div>
         <div className="board">
-            <Cell color={'gray'}/>
-            <Cell color={'gray'}/>
-            <Cell color={'gray'}/>
             <Cell />
             <Cell />
             <Cell />
-            <Cell />
-            <Cell />
-            <Cell />
-        </div>
-        <div className="board">
-            <Cell color={'gray'}/>
-            <Cell color={'gray'}/>
-            <Cell color={'gray'}/>
             <Cell />
             <Cell />
             <Cell />
@@ -104,9 +82,31 @@ const Board = () => {
             <Cell />
         </div>
         <div className="board">
-            <Cell color={'gray'}/>
-            <Cell color={'gray'}/>
-            <Cell color={'gray'}/>
+            <Cell color={'#404040'}/>
+            <Cell color={'#404040'}/>
+            <Cell color={'#404040'}/>
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+        </div>
+        <div className="board">
+            <Cell color={'#404040'}/>
+            <Cell color={'#404040'}/>
+            <Cell color={'#404040'}/>
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+        </div>
+        <div className="board">
+            <Cell color={'#404040'}/>
+            <Cell color={'#404040'}/>
+            <Cell color={'#404040'}/>
             <Cell />
             <Cell />
             <Cell />
