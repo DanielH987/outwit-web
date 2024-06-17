@@ -64,7 +64,7 @@ h1 {
 .cell {
   width: 50px;
   height: 50px;
-  background-color: darkgray;
+  background-color: #808080;
   border: 4px solid #000;
   display: flex;
   align-items: center;
