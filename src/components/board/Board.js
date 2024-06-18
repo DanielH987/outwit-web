@@ -6,18 +6,15 @@ const Board = () => {
     const columns = 9;
     const totalCells = rows * columns;
 
-    // Define ranges or specific cells for custom colors
     const lightGrayCells = [6, 7, 8, 15, 16, 17, 24, 25, 26];
     const darkGrayCells = [63, 64, 65, 72, 73, 74, 81, 82, 83];
 
-    // Function to determine the cell color
     const getCellColor = (index) => {
         if (lightGrayCells.includes(index)) return 'light-gray';
         if (darkGrayCells.includes(index)) return 'dark-gray';
-        return 'default-gray'; // Default class
+        return 'default-gray';
     };
 
-    // Render cells with conditional class assignment
     const renderCells = (count) => {
         return Array.from({ length: count }, (_, index) => (
             <Cell 
