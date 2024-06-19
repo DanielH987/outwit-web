@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Cell = ({ color }) => {
+const Cell = ({ className }) => {
     return (
-      <div className="cell" style={{ backgroundColor: color }}>
-      </div>
+        <div className={`cell ${className}`}>
+        </div>
     );
-  };
-  
-  export default Cell;
+};
+
+export default Cell;
