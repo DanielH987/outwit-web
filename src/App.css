@@ -1,3 +1,4 @@
+/* Import the font */
 @import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
 
 :root {
@@ -26,17 +27,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -48,33 +38,73 @@ h1 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board-container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr); /* 9 columns */
+  grid-template-rows: repeat(10, auto); /* 10 rows */
+  width: 100%;
+  max-width: 90vw; /* Responsive max width */
+  margin: 0 auto; /* Center the board horizontally */
 }
 
 .cell {
-  width: 50px;
-  height: 50px;
-  background-color: #808080;
-  border: 4px solid #000;
+  width: 100%; /* Fill available space in the grid */
+  padding-bottom: 100%; /* Maintain a square aspect ratio */
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid #000;
+  box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
+  color: #fff; /* Text color for better contrast */
+  font-size: 1.5vw; /* Responsive font size */
 }
 
-.board {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 4px solid #000;
-  flex-wrap: wrap;
+.cell.default-gray {
+  background-color: #808080; /* Default grey */
+}
+
+.cell.light-gray {
+  background-color: #D3D3D3; /* Light grey */
+}
+
+.cell.dark-gray {
+  background-color: #404040; /* Dark grey */
+}
+
+
+/* Medium screens (laptops, tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cell {
+    padding-bottom: 100%;
+    font-size: 1vw; /* Smaller font size for laptops */
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1025px) {
+  .board-container {
+    max-width: 35vw; /* Smaller board size for larger screens */
+  }
+
+  .cell {
+    padding-bottom: 100%;
+    font-size: 0.75vw; /* Smaller font size for large screens */
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .cell {
+    padding-bottom: 100%;
+    font-size: 2.5vw; /* Larger font size for small screens */
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+
+  .cell {
+    padding-bottom: 100%;
+    font-size: 3.5vw; /* Even larger font size for very small screens */
+  }
 }
