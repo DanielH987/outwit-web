@@ -1,9 +1,8 @@
 import React from 'react';
 
-const Chip = ({ label }) => {
+const Chip = ({ color, onClick }) => {
     return (
-        <div className="chip">
-            {label}
+        <div className={`chip ${color}`} onClick={onClick}>
         </div>
     );
 };
