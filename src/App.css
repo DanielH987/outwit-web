@@ -108,3 +108,32 @@ h1 {
     font-size: 3.5vw; /* Even larger font size for very small screens */
   }
 }
+
+/* src/components/chip/Chip.css */
+.chip {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.chip.red {
+  background-color: red;
+}
+
+.chip.blue {
+  background-color: blue;
+}
+
+.chip.green {
+  background-color: green;
+}
+
+/* Hover effect to make it interactive */
+.chip:hover {
+  transform: scale(1.1);
+}
