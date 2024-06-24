@@ -17,23 +17,21 @@ const Board = () => {
         { id: 2, position: 10, color: 'dark' },
         { id: 3, position: 20, color: 'dark' },
         { id: 4, position: 30, color: 'dark' },
-        { id: 5, position: 40, color: 'dark' },
+        { id: 5, position: 40, color: 'dark power' },
         { id: 6, position: 50, color: 'dark' },
         { id: 7, position: 60, color: 'dark' },
         { id: 8, position: 70, color: 'dark' },
         { id: 9, position: 80, color: 'dark' },
-        { id: 10, position: 90, color: 'dark' },
         // Light team chips
         { id: 11, position: 9, color: 'light' },
         { id: 12, position: 19, color: 'light' },
         { id: 13, position: 29, color: 'light' },
         { id: 14, position: 39, color: 'light' },
-        { id: 15, position: 49, color: 'light' },
+        { id: 15, position: 49, color: 'light power' },
         { id: 16, position: 59, color: 'light' },
         { id: 17, position: 69, color: 'light' },
         { id: 18, position: 79, color: 'light' },
         { id: 19, position: 89, color: 'light' },
-        { id: 20, position: 99, color: 'light' },
     ]);
 
     const getCellColor = (index) => {
