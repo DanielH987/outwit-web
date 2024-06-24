@@ -12,8 +12,28 @@ const Board = () => {
 
     // State to manage chip positions
     const [chips, setChips] = useState([
-        { id: 1, position: 10, color: 'red' }, // Example chip data
-        { id: 2, position: 20, color: 'blue' }
+        // Dark team chips
+        { id: 1, position: 0, color: 'dark' },
+        { id: 2, position: 10, color: 'dark' },
+        { id: 3, position: 20, color: 'dark' },
+        { id: 4, position: 30, color: 'dark' },
+        { id: 5, position: 40, color: 'dark' },
+        { id: 6, position: 50, color: 'dark' },
+        { id: 7, position: 60, color: 'dark' },
+        { id: 8, position: 70, color: 'dark' },
+        { id: 9, position: 80, color: 'dark' },
+        { id: 10, position: 90, color: 'dark' },
+        // Light team chips
+        { id: 11, position: 9, color: 'light' },
+        { id: 12, position: 19, color: 'light' },
+        { id: 13, position: 29, color: 'light' },
+        { id: 14, position: 39, color: 'light' },
+        { id: 15, position: 49, color: 'light' },
+        { id: 16, position: 59, color: 'light' },
+        { id: 17, position: 69, color: 'light' },
+        { id: 18, position: 79, color: 'light' },
+        { id: 19, position: 89, color: 'light' },
+        { id: 20, position: 99, color: 'light' },
     ]);
 
     const getCellColor = (index) => {
@@ -27,17 +47,10 @@ const Board = () => {
         if (chip) {
             return {
                 color: chip.color,
-                onClick: () => moveChip(chip.id)
+                onClick: () => {},
             };
         }
         return null;
-    };
-
-    const moveChip = (chipId) => {
-        // Logic to move the chip to a new cell
-        // This can be based on user input or predefined rules
-        const newPosition = prompt("Enter the new position for the chip:");
-        setChips(chips.map(chip => chip.id === chipId ? { ...chip, position: parseInt(newPosition, 10) } : chip));
     };
 
     const renderCells = (count) => {
@@ -46,16 +59,9 @@ const Board = () => {
                 key={index} 
                 className={`cell ${getCellColor(index)}`}
                 chip={getChipAtCell(index)}
-                onCellClick={() => placeChip(index)}
+                onCellClick={() => {}}
             />
         ));
-    };
-
-    const placeChip = (index) => {
-        // Example logic to place a new chip at a specific position
-        // This can be enhanced as per game rules
-        const newChip = { id: chips.length + 1, position: index, color: 'green' };
-        setChips([...chips, newChip]);
     };
 
     return (
