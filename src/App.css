@@ -146,6 +146,19 @@ h1 {
   outline: white solid 4px;
 }
 
+/* Power chip style */
+.chip.power::before {
+  content: '';
+  width: 15px; /* Size of the golden circle */
+  height: 15px;
+  background-color: gold;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center within the chip */
+}
+
 /* Medium screens (laptops, tablets) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .chip {
@@ -168,6 +181,10 @@ h1 {
     width: 30px;
     height: 30px;
   }
+  .chip.power::before {
+    width: 12px; /* Adjusted size for smaller screens */
+    height: 12px;
+  }
 }
 
 /* Very small screens */
@@ -175,5 +192,9 @@ h1 {
   .chip {
     width: 25px;
     height: 25px;
+  }
+  .chip.power::before {
+    width: 10px; /* Adjusted size for very small screens */
+    height: 10px;
   }
 }
